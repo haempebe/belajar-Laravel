@@ -23,3 +23,4 @@ Route::get("/coba/request", [CobaController::class, "request"]);
 Route::post("/coba/nested-request", [CobaController::class, "nestedRequest"]);
 
 route::get("response/index", [BazmaController::class, 'responseFunction']);
+route::get("response/header", [BazmaController::class, 'responseHeader']);

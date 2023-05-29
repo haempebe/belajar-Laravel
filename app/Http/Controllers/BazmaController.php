@@ -10,4 +10,18 @@ class BazmaController extends Controller
     {
         return response("ini adalah bentuk response");
     }
+    public function responseHeader()
+    {
+        $bodyResponse = [
+            'name' => 'Haempebe',
+            'school' => 'smk ti bazma'
+        ];
+        return response(json_encode($bodyResponse), 200)
+            ->header('Content-Type', 'Application/Json')
+            ->withHeaders([
+                'App' => 'Hamidzan PB',
+                'Classes' => 'XI',
+                'Web' => 'Laravel'
+            ]);
+    }
 }
