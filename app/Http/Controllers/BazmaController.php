@@ -24,4 +24,31 @@ class BazmaController extends Controller
                 'Web' => 'Laravel'
             ]);
     }
+
+    public function encryptionData()
+    {
+        $encrypt = encrypt("ini adalah enkripsi");
+        $decrypt = decrypt($encrypt);
+        dd($encrypt, $decrypt);
+    }
+
+    public function redirectTo()
+    {
+        return "redirect to";
+    }
+
+    public function redirectfrom()
+    {
+        return redirect("/redirect/to");
+    }
+
+    public function redirectToNamedRoute()
+    {
+        return "redirect to with named Route";
+    }
+
+    public function redirectFromNamedRoute()
+    {
+        return redirect(route("redirect.to"));
+    }
 }
